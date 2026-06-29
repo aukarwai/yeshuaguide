@@ -75,6 +75,7 @@ li + li { margin-top:6px; }
       <li><b>Action State second.</b> This tells you whether the market is asleep, forming, active, or messy.</li>
       <li><b>Bias third.</b> Read LONG or SHORT in the Action State line and What If Now.</li>
       <li><b>Target Scores fourth.</b> These show the possible distance and time runway.</li>
+      <li><b>Clock Lens fifth.</b> Check whether the current MYT block supports this type of extraction.</li>
       <li><b>Entry Lens last.</b> This is the timing gate. ENTER, WAIT, or AVOID.</li>
     </ol>
   </section>
@@ -114,6 +115,20 @@ li + li { margin-top:6px; }
     <p class="small">For 1000PEPEUSDT, 1 point equals 0.0000001. A 500-point move equals 0.0000500.</p>
   </section>
 
+  <section class="band">
+    <h2>24h Clock Lens</h2>
+    <p>This tells you whether the current MYT clock block historically suits quick extraction, core trades, runners, or caution.</p>
+    <div class="table">
+      <div class="row"><b class="good">20:00-21:59</b><span>Prime extraction block. Best for 350-700 points across 39-245 minutes.</span></div>
+      <div class="row"><b class="good">02:00-03:59</b><span>Quality window. Fewer signals, often cleaner when Entry Lens agrees.</span></div>
+      <div class="row"><b class="info">06:00-11:59</b><span>Runner-friendly. Better for 700-1100 point continuation ideas.</span></div>
+      <div class="row"><b class="warn">12:00-13:59</b><span>Selective 350-500 point fast/core trades.</span></div>
+      <div class="row"><b class="info">18:00-19:59</b><span>Build-up block before the strongest 20:00 window.</span></div>
+      <div class="row"><b class="bad">14:00-15:59</b><span>Caution block. Demand cleaner confirmation or stand aside.</span></div>
+      <div class="row"><b class="bad">22:00-23:59</b><span>Noisier block. Many signals can appear, but chasing risk is higher.</span></div>
+    </div>
+  </section>
+
   <section class="grid">
     <div class="card">
       <h2>Support Panels</h2>
@@ -137,7 +152,7 @@ li + li { margin-top:6px; }
   <section class="band">
     <h2>Simple Decision Rules</h2>
     <div class="table">
-      <div class="row"><b class="good">Consider ENTER</b><span>Action State is FORMATION or ACTUAL, Entry Lens says ENTER, direction is clear, Target Scores show runway, and no major chop warning appears.</span></div>
+      <div class="row"><b class="good">Consider ENTER</b><span>Action State is FORMATION or ACTUAL, Entry Lens says ENTER, direction is clear, Target Scores show runway, Clock Lens fits the target tier, and no major chop warning appears.</span></div>
       <div class="row"><b class="warn">WAIT</b><span>PRE-FORMATION appears, Target Scores are rising, or Entry Lens has only partial agreement. Let the setup mature.</span></div>
       <div class="row"><b class="bad">AVOID</b><span>Feed is stale, Action State says RESIDUAL / CHOP, Entry Lens says AVOID, bias is thin, or the panes disagree.</span></div>
     </div>
@@ -184,7 +199,7 @@ li + li { margin-top:6px; }
 
   <section class="callout">
     <h2>Best Practical Rule</h2>
-    <p>Do not enter just because one panel looks exciting. JESUS is strongest when <b>Action State</b>, <b>bias</b>, <b>Target Scores</b>, <b>Entry Lens</b>, and <b>risk filters</b> point in the same direction.</p>
+    <p>Do not enter just because one panel looks exciting. JESUS is strongest when <b>Action State</b>, <b>bias</b>, <b>Target Scores</b>, <b>Clock Lens</b>, <b>Entry Lens</b>, and <b>risk filters</b> point in the same direction.</p>
   </section>
 
   <section class="band">
@@ -194,6 +209,7 @@ li + li { margin-top:6px; }
       <li>Is Action State better than WAIT?</li>
       <li>Is the LONG or SHORT bias obvious?</li>
       <li>Do Target Scores show enough runway for the trade?</li>
+      <li>Does Clock Lens fit the target tier, or is it warning you to be stricter?</li>
       <li>Does Entry Lens say ENTER, or at least stop saying AVOID?</li>
       <li>Are chop, contradiction, and flow acceptable?</li>
       <li>Do you already know your invalidation point before entering?</li>
