@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101214">
+<title>JESUS Guide - Simple Trading Read</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg:#101214; --ink:#f2f4ef; --muted:#9da6a0; --line:#2a302d;
+  --panel:#181b1c; --panel2:#1e2221; --green:#47d18c; --red:#ff5d5d;
+  --amber:#ffbd4a; --cyan:#57c7ff; --soft:#dce7df;
+}
+* { box-sizing:border-box; }
+html,body { margin:0; min-height:100%; background:var(--bg); color:var(--ink);
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  letter-spacing:0; }
+body { padding:max(14px, env(safe-area-inset-top)) 12px max(22px, env(safe-area-inset-bottom)); }
+a { color:var(--cyan); text-decoration:none; }
+.app { max-width:980px; margin:0 auto; display:grid; gap:12px; }
+.top { display:grid; gap:6px; padding:8px 2px 2px; }
+h1,h2,h3,p { margin:0; }
+h1 { font-size:26px; line-height:1.05; }
+h2 { font-size:17px; line-height:1.2; }
+h3 { font-size:14px; line-height:1.2; }
+p,li { color:var(--soft); font-size:14px; line-height:1.45; }
+ul,ol { margin:8px 0 0; padding-left:20px; }
+li + li { margin-top:6px; }
+.sub { color:var(--muted); font-size:13px; line-height:1.4; }
+.grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:13px; display:grid; gap:8px; }
+.band { background:var(--panel2); border:1px solid var(--line); border-radius:8px; padding:14px; display:grid; gap:10px; }
+.pillrow { display:flex; flex-wrap:wrap; gap:7px; }
+.pill { border:1px solid var(--line); background:#111313; border-radius:999px; padding:6px 8px; font-size:12px; color:var(--muted); }
+.good { color:var(--green); }
+.warn { color:var(--amber); }
+.bad { color:var(--red); }
+.info { color:var(--cyan); }
+.table { display:grid; gap:7px; }
+.row { display:grid; grid-template-columns:150px 1fr; gap:8px; padding:8px; border:1px solid var(--line); border-radius:8px; background:#141717; }
+.row b { font-size:13px; }
+.row span { color:var(--soft); font-size:13px; line-height:1.35; }
+.scenario { border-left:3px solid var(--cyan); padding-left:10px; display:grid; gap:5px; }
+.scenario.enter { border-color:var(--green); }
+.scenario.wait { border-color:var(--amber); }
+.scenario.avoid { border-color:var(--red); }
+.callout { border:1px solid rgba(255,189,74,.45); background:#181511; border-radius:8px; padding:12px; }
+.small { color:var(--muted); font-size:12px; line-height:1.4; }
+@media (max-width:760px) {
+  body { padding-left:8px; padding-right:8px; }
+  .grid { grid-template-columns:1fr; }
+  .row { grid-template-columns:1fr; }
+  h1 { font-size:24px; }
+}
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <h1>JESUS Simple Reading Guide</h1>
+    <p class="sub">A concise field guide for reading the dashboard before making an intraday 1000PEPEUSDT trade decision.</p>
+    <div class="pillrow">
+      <span class="pill">Use with live dashboard</span>
+      <span class="pill">Decision support only</span>
+      <span class="pill">No guarantees</span>
+      <a class="pill" href="./JESUS.html">Open dashboard</a>
+    </div>
+  </header>
+
+  <section class="band">
+    <h2>The 30-Second Read</h2>
+    <ol>
+      <li><b>Feed first.</b> If Feed is not live or freshness is stale, do not trust the signal yet.</li>
+      <li><b>Action State second.</b> This tells you whether the market is asleep, forming, active, or messy.</li>
+      <li><b>Bias third.</b> Read LONG or SHORT in the Action State line and What If Now.</li>
+      <li><b>Target Scores fourth.</b> These show the possible distance and time runway.</li>
+      <li><b>Entry Lens last.</b> This is the timing gate. ENTER, WAIT, or AVOID.</li>
+    </ol>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Action State</h2>
+      <div class="table">
+        <div class="row"><b>WAIT</b><span>Nothing strong enough yet. Watch, but do not force a trade.</span></div>
+        <div class="row"><b class="info">PRE-FORMATION</b><span>Early shape is appearing. Prepare, but still wait for confirmation.</span></div>
+        <div class="row"><b class="warn">FORMATION</b><span>The setup is serious. Start checking Entry Lens carefully.</span></div>
+        <div class="row"><b class="good">ACTUAL STATE</b><span>The model trigger is active. You still need Entry Lens and risk filters to agree.</span></div>
+        <div class="row"><b class="bad">RESIDUAL / CHOP</b><span>Market is messy or noisy. Usually avoid new entries.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Entry Lens</h2>
+      <div class="table">
+        <div class="row"><b>1m Pulse</b><span>Immediate push. Is price moving in the intended direction right now?</span></div>
+        <div class="row"><b>4m Ignition</b><span>Short burst. Is momentum beginning to catch?</span></div>
+        <div class="row"><b>13m Entry</b><span>Main lower-time-frame entry window. This is the execution pane.</span></div>
+        <div class="row"><b>39m Confirm</b><span>Bigger confirmation. Helps avoid entering into chop or a fake push.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Target Scores In Plain English</h2>
+    <p>Each row asks: "How likely is this size move within this time window?"</p>
+    <div class="table">
+      <div class="row"><b>350 / 39m</b><span>A faster scalp-style move of 350 points within 39 minutes.</span></div>
+      <div class="row"><b>500 / 245m</b><span>A bigger intraday runway of 500 points within 245 minutes.</span></div>
+      <div class="row"><b>750 / 245m</b><span>A larger move. Stronger potential, but usually needs broader alignment.</span></div>
+      <div class="row"><b>Score number</b><span>Readiness. Low means weak. Near trigger means forming. Over trigger means active.</span></div>
+    </div>
+    <p class="small">For 1000PEPEUSDT, 1 point equals 0.0000001. A 500-point move equals 0.0000500.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Support Panels</h2>
+      <div class="table">
+        <div class="row"><b>What If Now</b><span>The plain-language trade-now bias. Use it as a quick sanity check.</span></div>
+        <div class="row"><b>Runway</b><span>The strongest target and its time window. This tells you how much room JESUS sees.</span></div>
+        <div class="row"><b>Lead Time</b><span>Whether the move is active now, forming soon, or not present yet.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Risk Filters</h2>
+      <div class="table">
+        <div class="row"><b>Path Geometry</b><span>How clean or choppy the path is. High chop means entries are more dangerous.</span></div>
+        <div class="row"><b>Flow Pressure</b><span>Buy/sell pressure and activity. You want flow to support your direction.</span></div>
+        <div class="row"><b>Anti-Thesis</b><span>Contradictions. If this looks ugly, reduce trust in the setup.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Simple Decision Rules</h2>
+    <div class="table">
+      <div class="row"><b class="good">Consider ENTER</b><span>Action State is FORMATION or ACTUAL, Entry Lens says ENTER, direction is clear, Target Scores show runway, and no major chop warning appears.</span></div>
+      <div class="row"><b class="warn">WAIT</b><span>PRE-FORMATION appears, Target Scores are rising, or Entry Lens has only partial agreement. Let the setup mature.</span></div>
+      <div class="row"><b class="bad">AVOID</b><span>Feed is stale, Action State says RESIDUAL / CHOP, Entry Lens says AVOID, bias is thin, or the panes disagree.</span></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Common Scenarios</h2>
+    <div class="scenario enter">
+      <h3 class="good">Scenario 1: Clean LONG Entry</h3>
+      <p>Action State is FORMATION or ACTUAL. Bias says LONG. Target Scores are strong. Entry Lens says ENTER. Flow supports LONG and chop is not high.</p>
+      <p><b>Layman read:</b> The runway exists, the direction is clear, and the entry timing agrees.</p>
+    </div>
+    <div class="scenario enter">
+      <h3 class="good">Scenario 2: Clean SHORT Entry</h3>
+      <p>Action State is FORMATION or ACTUAL. Bias says SHORT. Target Scores are strong. Entry Lens says ENTER. Flow supports SHORT and 39m confirm agrees.</p>
+      <p><b>Layman read:</b> Same as a long setup, but the pressure points downward.</p>
+    </div>
+    <div class="scenario wait">
+      <h3 class="warn">Scenario 3: Early Setup, Not Ready</h3>
+      <p>Action State is PRE-FORMATION. Target Scores are rising, but Entry Lens says WAIT.</p>
+      <p><b>Layman read:</b> Something may be building, but the lower time frames have not given permission yet.</p>
+    </div>
+    <div class="scenario avoid">
+      <h3 class="bad">Scenario 4: Target Scores Look Good, Entry Lens Says AVOID</h3>
+      <p>Runway exists, but the 1m, 4m, 13m, or 39m panes disagree, or flow fights the direction.</p>
+      <p><b>Layman read:</b> There may be distance available, but the entry timing is poor. Do not chase.</p>
+    </div>
+    <div class="scenario avoid">
+      <h3 class="bad">Scenario 5: RESIDUAL / CHOP</h3>
+      <p>Action State says RESIDUAL / CHOP, even if price is moving.</p>
+      <p><b>Layman read:</b> The market is noisy. You can be right on direction and still get shaken out.</p>
+    </div>
+    <div class="scenario wait">
+      <h3 class="warn">Scenario 6: Bias Flips Quickly</h3>
+      <p>Bias changes from LONG to SHORT or SHORT to LONG while Target Scores stay moderate.</p>
+      <p><b>Layman read:</b> The market is undecided. Wait for one side to dominate.</p>
+    </div>
+    <div class="scenario avoid">
+      <h3 class="bad">Scenario 7: Feed Is Not Live</h3>
+      <p>Feed is reconnecting, stale, unavailable, or the price stops updating.</p>
+      <p><b>Layman read:</b> You are reading old information. Pause until the feed is live again.</p>
+    </div>
+  </section>
+
+  <section class="callout">
+    <h2>Best Practical Rule</h2>
+    <p>Do not enter just because one panel looks exciting. JESUS is strongest when <b>Action State</b>, <b>bias</b>, <b>Target Scores</b>, <b>Entry Lens</b>, and <b>risk filters</b> point in the same direction.</p>
+  </section>
+
+  <section class="band">
+    <h2>Quick Checklist Before Clicking Buy or Sell</h2>
+    <ol>
+      <li>Is Feed live and fresh?</li>
+      <li>Is Action State better than WAIT?</li>
+      <li>Is the LONG or SHORT bias obvious?</li>
+      <li>Do Target Scores show enough runway for the trade?</li>
+      <li>Does Entry Lens say ENTER, or at least stop saying AVOID?</li>
+      <li>Are chop, contradiction, and flow acceptable?</li>
+      <li>Do you already know your invalidation point before entering?</li>
+    </ol>
+  </section>
+
+  <footer class="top">
+    <p class="small">This guide is educational decision support. It does not remove trading risk, guarantee outcomes, or replace position sizing, stops, and personal discipline.</p>
+  </footer>
+</main>
+</body>
+</html>
