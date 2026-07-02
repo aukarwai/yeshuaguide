@@ -76,6 +76,7 @@ li + li { margin-top:6px; }
       <li><b>Bias third.</b> Read LONG or SHORT in the Action State line and What If Now.</li>
       <li><b>Target Scores fourth.</b> These show the possible distance and time runway.</li>
       <li><b>Clock Lens fifth.</b> Check whether the current MYT block supports this type of extraction.</li>
+      <li><b>Price-Time Array Lens sixth.</b> Check whether price is near one of your automatic horizontal arrays and a vertical time window.</li>
       <li><b>Entry Lens last.</b> This is the timing gate. ENTER, WAIT, or AVOID.</li>
     </ol>
   </section>
@@ -129,6 +130,20 @@ li + li { margin-top:6px; }
     </div>
   </section>
 
+  <section class="band">
+    <h2>Price-Time Array Lens</h2>
+    <p>This replaces your daily manual horizontal and vertical line drawing inside JESUS.</p>
+    <div class="table">
+      <div class="row"><b>Nearest Array</b><span>The closest automatic horizontal line from your fixed MYT candle-low anchors.</span></div>
+      <div class="row"><b>Distance</b><span>How many points live price is above or below that line. Small distance means price is interacting with the array.</span></div>
+      <div class="row"><b>Vertical Window</b><span>Your fixed time stamps. If a reclaim or rejection happens near one, the reaction deserves more attention.</span></div>
+      <div class="row"><b class="warn">TOUCH</b><span>Price is on the line. Do not enter from touch alone. Wait for reclaim, rejection, or Entry Lens agreement.</span></div>
+      <div class="row"><b class="good">RECLAIM</b><span>Price swept below the array and got back above it. Long idea only if JESUS bias and Entry Lens agree.</span></div>
+      <div class="row"><b class="bad">REJECT / BROKEN</b><span>Price failed at the array or broke below it. Short idea only if JESUS bias and Entry Lens agree.</span></div>
+      <div class="row"><b>FAR</b><span>No array edge nearby. Read the normal dashboard first.</span></div>
+    </div>
+  </section>
+
   <section class="grid">
     <div class="card">
       <h2>Support Panels</h2>
@@ -152,9 +167,9 @@ li + li { margin-top:6px; }
   <section class="band">
     <h2>Simple Decision Rules</h2>
     <div class="table">
-      <div class="row"><b class="good">Consider ENTER</b><span>Action State is FORMATION or ACTUAL, Entry Lens says ENTER, direction is clear, Target Scores show runway, Clock Lens fits the target tier, and no major chop warning appears.</span></div>
-      <div class="row"><b class="warn">WAIT</b><span>PRE-FORMATION appears, Target Scores are rising, or Entry Lens has only partial agreement. Let the setup mature.</span></div>
-      <div class="row"><b class="bad">AVOID</b><span>Feed is stale, Action State says RESIDUAL / CHOP, Entry Lens says AVOID, bias is thin, or the panes disagree.</span></div>
+      <div class="row"><b class="good">Consider ENTER</b><span>Action State is FORMATION or ACTUAL, Entry Lens says ENTER, direction is clear, Target Scores show runway, Clock Lens fits the target tier, Price-Time Array does not conflict, and no major chop warning appears.</span></div>
+      <div class="row"><b class="warn">WAIT</b><span>PRE-FORMATION appears, Target Scores are rising, Entry Lens has only partial agreement, or Price-Time Array says TOUCH. Let the setup mature.</span></div>
+      <div class="row"><b class="bad">AVOID</b><span>Feed is stale, Action State says RESIDUAL / CHOP, Entry Lens says AVOID, bias is thin, Price-Time Array conflicts with direction, or the panes disagree.</span></div>
     </div>
   </section>
 
@@ -162,12 +177,12 @@ li + li { margin-top:6px; }
     <h2>Common Scenarios</h2>
     <div class="scenario enter">
       <h3 class="good">Scenario 1: Clean LONG Entry</h3>
-      <p>Action State is FORMATION or ACTUAL. Bias says LONG. Target Scores are strong. Entry Lens says ENTER. Flow supports LONG and chop is not high.</p>
+      <p>Action State is FORMATION or ACTUAL. Bias says LONG. Target Scores are strong. Entry Lens says ENTER. Flow supports LONG and Price-Time Array is FAR, ABOVE, or RECLAIM.</p>
       <p><b>Layman read:</b> The runway exists, the direction is clear, and the entry timing agrees.</p>
     </div>
     <div class="scenario enter">
       <h3 class="good">Scenario 2: Clean SHORT Entry</h3>
-      <p>Action State is FORMATION or ACTUAL. Bias says SHORT. Target Scores are strong. Entry Lens says ENTER. Flow supports SHORT and 39m confirm agrees.</p>
+      <p>Action State is FORMATION or ACTUAL. Bias says SHORT. Target Scores are strong. Entry Lens says ENTER. Flow supports SHORT and Price-Time Array is FAR, REJECT, or BROKEN.</p>
       <p><b>Layman read:</b> Same as a long setup, but the pressure points downward.</p>
     </div>
     <div class="scenario wait">
@@ -177,7 +192,7 @@ li + li { margin-top:6px; }
     </div>
     <div class="scenario avoid">
       <h3 class="bad">Scenario 4: Target Scores Look Good, Entry Lens Says AVOID</h3>
-      <p>Runway exists, but the 1m, 4m, 13m, or 39m panes disagree, or flow fights the direction.</p>
+      <p>Runway exists, but the 1m, 4m, 13m, or 39m panes disagree, flow fights the direction, or Price-Time Array conflicts with the bias.</p>
       <p><b>Layman read:</b> There may be distance available, but the entry timing is poor. Do not chase.</p>
     </div>
     <div class="scenario avoid">
@@ -199,7 +214,7 @@ li + li { margin-top:6px; }
 
   <section class="callout">
     <h2>Best Practical Rule</h2>
-    <p>Do not enter just because one panel looks exciting. JESUS is strongest when <b>Action State</b>, <b>bias</b>, <b>Target Scores</b>, <b>Clock Lens</b>, <b>Entry Lens</b>, and <b>risk filters</b> point in the same direction.</p>
+    <p>Do not enter just because one panel looks exciting. JESUS is strongest when <b>Action State</b>, <b>bias</b>, <b>Target Scores</b>, <b>Clock Lens</b>, <b>Price-Time Array Lens</b>, <b>Entry Lens</b>, and <b>risk filters</b> point in the same direction.</p>
   </section>
 
   <section class="band">
@@ -210,6 +225,7 @@ li + li { margin-top:6px; }
       <li>Is the LONG or SHORT bias obvious?</li>
       <li>Do Target Scores show enough runway for the trade?</li>
       <li>Does Clock Lens fit the target tier, or is it warning you to be stricter?</li>
+      <li>Is Price-Time Array Lens supportive, neutral, or telling you to wait at a touch?</li>
       <li>Does Entry Lens say ENTER, or at least stop saying AVOID?</li>
       <li>Are chop, contradiction, and flow acceptable?</li>
       <li>Do you already know your invalidation point before entering?</li>
